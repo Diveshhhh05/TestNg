@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="username" value="Admin"></parameter>
+  <parameter name="password" value="admin123"></parameter>
+    <classes>
+      <class name="tests.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <listeners>
+  		<listener class-name="utils.RetryListener"/>
+  		<listener class-name="utils.TestNGListener"/>
+  </listeners>
+</suite> <!-- Suite -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="utils.RetryListener"/>
+    <listener class-name="utils.TestNGListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+          <include name="configureDriver"/>
+          <include name="launchApp"/>
+          <include name="loginInValidCredentials"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
